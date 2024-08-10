@@ -4,26 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perguntas e Respostas</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <img src="https://picsum.photos/300/200" alt="random-photo">
     <h1>Perguntas e Respostas</h1>
     <hr>
     <h2>Lista de perguntas</h2>
-    <p>Nome: <%= nome %></p>
-    <p>Linguagem favorita: <%= lang %></p>
-    <p>Empresa: <%= empresa %></p>
-    <p>Inscritos: <%= inscritos %></p>
-
-    <% if(msg){ %>
-        <h3>Isso é uma mensagem de erro</h3>
-    <% } %>  <!-- Space between `%` and `}` -->
-
-    <hr>
-
-    <% produtos.forEach(produto => { %>
-        <p>Nome do Produto: <%= produto.nome %></p>  <!-- Corrected the output syntax -->
-        <p>Preço: <%= produto.preco %></p>  <!-- Corrected the output syntax -->
-    <% }) %>  <!-- Space between `%` and `)` -->
-
 </body>
 </html>
