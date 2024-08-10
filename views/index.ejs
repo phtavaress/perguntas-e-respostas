@@ -13,5 +13,17 @@
     <p>Linguagem favorita: <%= lang %></p>
     <p>Empresa: <%= empresa %></p>
     <p>Inscritos: <%= inscritos %></p>
+
+    <% if(msg){ %>
+        <h3>Isso é uma mensagem de erro</h3>
+    <% } %>  <!-- Space between `%` and `}` -->
+
+    <hr>
+
+    <% produtos.forEach(produto => { %>
+        <p>Nome do Produto: <%= produto.nome %></p>  <!-- Corrected the output syntax -->
+        <p>Preço: <%= produto.preco %></p>  <!-- Corrected the output syntax -->
+    <% }) %>  <!-- Space between `%` and `)` -->
+
 </body>
 </html>
