@@ -1,11 +1,11 @@
 const express = require('express');
-const ejs = require('ejs');
-
+const bp = require('body-parser');
+const bodyParser = require('body-parser');
 
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -16,7 +16,9 @@ app.get('/perguntar', (req, res) => {
 });
 
 app.post('/salvar', (req, res) => {
-    console.log('Formulário recebido!')
+    const titulo = req.body.titulo;
+    const descricao = req.body.descricao;
+    console.log('Formulário recebido!\nTítulo: ' + titulo + '\nDescrição:' + descricao);
     res.send('Formulário recebido!');
 });
 
