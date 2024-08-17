@@ -2,6 +2,7 @@ const express = require('express');
 const bp = require('body-parser');
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
+const pergunta = require('./database/Pergunta');
 
 
 // Database
